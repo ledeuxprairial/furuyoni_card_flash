@@ -209,13 +209,38 @@
  
   //ランダムで画像ファイルを取得して表示する
   var obj = document.getElementById("im1");
-  var a = Math.floor(Math.random() * arr.length);
-  obj.src = arr[a];
+   
+   //セレクトされているキャラでフィルタ
+  var  filtered_arr = arr.filter( function( element, index, array){
+    return element.indexOf(document.getElementById("character")) >= 0;
+  })
+  
+  var a = Math.floor(Math.random() * filtered_arr.length);
+  obj.src = filtered_arr[a];
 }
 </script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+  	<form name="form1">
+	<select id="character">
+		  <option value="na">全て</option>
+	    <option value="na_01">01_ユリナ</option>
+	    <option value="na_02">02_サイネ</option>
+	    <option value="na_03">03_ヒミカ</option>
+	    <option value="na_04">04_トコヨ</option>
+	    <option value="na_05">05_オボロ</option>
+	    <option value="na_06">06_ユキヒ</option>
+	    <option value="na_07">07_シンラ</option>
+	    <option value="na_08">08_ハガネ</option>
+	    <option value="na_09">09_チカゲ</option>
+	    <option value="na_10">10_クルル</option>
+	    <option value="na_11">11_サリヤ</option>
+	    <option value="na_12">12_ライラ</option>
+	    <option value="na_13">13_ウツロ</option>
+	    <option value="na_14">14_ホノカ</option>
+	</select>
+	</form>
   <img id="im1" alt="ここに表示されます。">
   <br/>
   <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()">
