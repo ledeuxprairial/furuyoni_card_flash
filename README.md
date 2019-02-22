@@ -5,4 +5,4 @@
 https://main-bakafire.ssl-lolipop.jp/furuyoni/na/rule.html  
   
 ・画像はコモンズのものを50%で縮小済み  
-・連絡先のようなもの（https://twitter.com/prairial　）
+・連絡先のようなもの：https://twitter.com/prairial
