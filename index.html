@@ -209,13 +209,11 @@
  
   //ランダムで画像ファイルを取得して表示する
   var obj = document.getElementById("im1");
-   //alert(document.getElementById("character").value);
+	 
    //セレクトされているキャラでフィルタ
   var  filtered_arr = arr.filter( function( element, index, array){
 	  return (element.indexOf(document.getElementById("character").value) >= 0 );
-    //return element.indexOf(document.getElementById("character")) >= 0;
   })
-  //var filtered_arr = arr;
 	 
   var idx = Math.floor(Math.random() * filtered_arr.length);
   obj.src = filtered_arr[idx];
@@ -243,7 +241,7 @@
 	    <option value="na_14">14_ホノカ</option>
 	</select>
 	</form>
-  <img id="im1" alt="ここに表示されます。">
+  <img id="im1" alt="ここに表示されます。" src="cardback_normal.png">
   <br/>
   <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()">
   <br/>
