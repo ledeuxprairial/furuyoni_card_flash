@@ -8,7 +8,7 @@
  function getImage(){
   //画像ファイル名を配列で保持
   var arr = [
-    'na_01_yurina_a1_n_1.png',
+'na_01_yurina_a1_n_1.png',
 'na_01_yurina_a1_n_6.png',
 'na_01_yurina_a1_s_2.png',
 'na_01_yurina_o_n_1.png',
@@ -211,10 +211,11 @@
   var obj = document.getElementById("im1");
    
    //セレクトされているキャラでフィルタ
-  //var  filtered_arr = arr.filter( function( element, index, array){
-  //  return element.indexOf(document.getElementById("character")) >= 0;
-  //})
-  var filtered_arr = arr;
+  var  filtered_arr = arr.filter( function( element, index, array){
+	  return (element.indexOf('na_01') >= 0 );
+    //return element.indexOf(document.getElementById("character")) >= 0;
+  })
+  //var filtered_arr = arr;
 	 
   var idx = Math.floor(Math.random() * filtered_arr.length);
   obj.src = filtered_arr[idx];
