@@ -211,12 +211,13 @@
   var obj = document.getElementById("im1");
    
    //セレクトされているキャラでフィルタ
-  var  filtered_arr = arr.filter( function( element, index, array){
-    return element.indexOf(document.getElementById("character")) >= 0;
-  })
-  
-  var a = Math.floor(Math.random() * filtered_arr.length);
-  obj.src = filtered_arr[a];
+  //var  filtered_arr = arr.filter( function( element, index, array){
+  //  return element.indexOf(document.getElementById("character")) >= 0;
+  //})
+  var filtered_arr = arr;
+	 
+  var idx = Math.floor(Math.random() * filtered_arr.length);
+  obj.src = filtered_arr[idx];
 }
 </script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
