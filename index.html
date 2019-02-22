@@ -212,7 +212,7 @@
    alert(document.getElementById("character").value);
    //セレクトされているキャラでフィルタ
   var  filtered_arr = arr.filter( function( element, index, array){
-	  return (element.indexOf('na_01') >= 0 );
+	  return (element.indexOf(document.getElementById("character").value) >= 0 );
     //return element.indexOf(document.getElementById("character")) >= 0;
   })
   //var filtered_arr = arr;
