@@ -218,12 +218,17 @@
   var idx = Math.floor(Math.random() * filtered_arr.length);
 	 
 	 //隠すための画像追加
-  document.getElementById("im2").src = 'hide_text3.png';
+  //document.getElementById("im2").src = 'hide_text3.png';
   document.getElementById("im1").src = filtered_arr[idx];
 }
 	  
   function switchHide(){
-	  document.getElementById("im2").src = 'hide_none.png';
+	  if (document.getElementById("im2").getAttribute("src") == 'hide_text.png'){  
+	  	document.getElementById("im2").src = 'hide_none.png';
+	  }else{
+		  document.getElementById("im2").src = 'hide_text.png';
+		  getImage();
+	  }
   }
 </script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
