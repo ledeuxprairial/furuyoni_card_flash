@@ -223,12 +223,21 @@
 }
 	  
   function switchHide(){
-	  if (document.getElementById("im2").getAttribute("src") == 'hide_text.png'){  
-	  	document.getElementById("im2").src = 'hide_none.png';
-	  }else{
-		  document.getElementById("im2").src = 'hide_text.png';
+	  if(document.getElementById("Checkbox1").checked == false){
+		  //テキストを隠さない場合は隠匿画像を解除、次の画像をロード
+		  document.getElementById("im2").src = 'hide_none.png';
 		  getImage();
+	  }else{
+		  //テキストを隠す場合は隠匿画像の有無で分岐
+		 if(document.getElementById("im2").getAttribute("src") == 'hide_text.png'){  
+	  		document.getElementById("im2").src = 'hide_none.png';
+	 	 }else{
+		  	document.getElementById("im2").src = 'hide_text.png';
+		  	getImage();
+	  	}  
 	  }
+	  
+
   }
 </script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -264,12 +273,13 @@
     top: 0px;
 }
 </style>
-  <div class="relative">
-	  <img id="im1" alt="ここに表示されます。" src="cardback_normal.png" />
-	  <img id="im2" onclick="switchHide();" src="hide_none.png" class="absolute"  />
-	</div>
-	 <br/>
-  <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()">
+ <div class="relative">
+	 <img id="im1" alt="ここに表示されます。" src="cardback_normal.png" />
+	 <img id="im2" onclick="switchHide();" src="hide_none.png" class="absolute"  />
+ </div>
+ <br/>
+  <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()" />
+  <input id="Checkbox1" type="checkbox" /><label for="Checkbox1">テキストを隠す</label><br />
   <br/>
   ふるよにコモンズ/BakaFire,TOKIAME 
   <br/>
