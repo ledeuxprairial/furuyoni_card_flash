@@ -208,7 +208,7 @@
 ];
  
   //ランダムで画像ファイルを取得して表示する
-  var obj = document.getElementById("im1");
+  //var obj = document.getElementById("im1");
 	 
    //セレクトされているキャラでフィルタ
   var  filtered_arr = arr.filter( function( element, index, array){
@@ -223,13 +223,14 @@
 }
 	  
   function switchHide(){
-	var obj = document.getElementById("im2");
-	  alert(obj.src);
-	  if(obj.src == 'hide_text.png'){
-		  obj.src = 'hide_none.png';
-	  }else{
-		  obj.src = 'hide_text.png';
-	  }
+	  document.getElementById("im2").src = 'hide_none.png';
+	//var obj = document.getElementById("im2");
+	 // alert(obj.src);
+	 // if(obj.src == 'hide_text.png'){
+//		  obj.src = 'hide_none.png';
+//	  }else{
+//		  obj.src = 'hide_text.png';
+//	  }
   }
 </script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
