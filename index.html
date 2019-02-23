@@ -243,7 +243,25 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
-  	<form name="form1">
+
+	
+<style>
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+</style>
+ <div class="relative">
+	 <img id="im1" alt="ここに表示されます。" src="cardback_normal.png" />
+	 <img id="im2" onclick="switchHide();" src="hide_none.png" class="absolute"  />
+ </div>
+ <br/>
+  
+	  	<form name="form1">
 	<select id="character">
 	    <option value="na">全て</option>
 	    <option value="na_01">01_ユリナ</option>
@@ -262,23 +280,7 @@
 	    <option value="na_14">14_ホノカ</option>
 	</select>
 	</form>
-	
-<style>
-.relative {
-    position: relative;
-}
-.absolute {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-</style>
- <div class="relative">
-	 <img id="im1" alt="ここに表示されます。" src="cardback_normal.png" />
-	 <img id="im2" onclick="switchHide();" src="hide_none.png" class="absolute"  />
- </div>
- <br/>
-  <!-- <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()" /> -->
+<!-- <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()" /> -->
   <input id="Checkbox1" type="checkbox" checked="checked" /><label for="Checkbox1">テキストを隠す</label><br />
   <br/>
   ふるよにコモンズ/BakaFire,TOKIAME 
