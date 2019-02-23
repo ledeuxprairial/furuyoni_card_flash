@@ -216,16 +216,19 @@
   })
 	 
   var idx = Math.floor(Math.random() * filtered_arr.length);
-  obj.src = filtered_arr[idx];
+	 
+	 //隠すための画像追加
+  document.getElementById("im2").src = 'hide_text.png';
+  document.getElementById("im1").src = filtered_arr[idx];
 }
 	  
   function switchHide(){
 	var obj = document.getElementById("im2");
 	  alert(obj.src);
-	  if(obj.src == "hide_none.png"){
-		  obj.src = "hide_text.png";
+	  if(obj.src == 'hide_text.png'){
+		  obj.src = 'hide_none.png';
 	  }else{
-		  obj.src = "hide_none.png";
+		  obj.src = 'hide_text.png';
 	  }
   }
 </script>
