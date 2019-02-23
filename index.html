@@ -218,6 +218,15 @@
   var idx = Math.floor(Math.random() * filtered_arr.length);
   obj.src = filtered_arr[idx];
 }
+	  
+  function switchHide(){
+	var obj = document.getElementById("im2");
+	  if(obj.src == "hide_none.png"){
+		  obj.src = "hide_text.png";
+	  }else{
+		  obj.src = "hide_none.png";
+	  }
+  }
 </script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
@@ -255,7 +264,7 @@
   <div class="relative">
   	<img 
 	  <img id="im1" class=alt="ここに表示されます。" src="cardback_normal.png" />
-	  <img src="hide_none.png" class="absolute"  />
+	  <img id="im2" onclick="switchHide();" src="hide_none.png" class="absolute"  />
 	</div>
 	 <br/>
   <input type="button" value="　　　　　　　　　　更新　　　　　　　　　　" onclick="getImage()">
